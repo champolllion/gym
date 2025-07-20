@@ -348,6 +348,10 @@ ol {
 	padding: 0 15px;
 	padding-top: 55px;
 	z-index: 99;
+	position: fixed;
+	margin-bottom: 20px;
+	height: 15%;
+	background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.7) 78%, rgba(250, 250, 250, 0) 100%);
 }
 
 .logo a {
@@ -495,11 +499,16 @@ ol {
 
 .offcanvas-menu-wrapper {
 	display: none;
+	
 }
 
 .canvas-open {
 	display: none;
 }
+.mobile-menu{
+	background:none;
+}
+
 
 /*---------------------
   Hero Section
@@ -1099,7 +1108,7 @@ ol {
 	border-radius: 50%;
 	line-height: 65px;
 	text-align: center;
-	float: left;
+	/* float: left; */
 	margin-right: 20px;
 }
 
@@ -2608,7 +2617,7 @@ ol {
 	border-radius: 50%;
 	line-height: 65px;
 	text-align: center;
-	float: left;
+	/* float: left; */
 	margin-right: 20px;
 }
 
@@ -2817,6 +2826,9 @@ ol {
 		height: auto;
 		padding: 120px 70px 60px 70px;
 	}
+	.header-section{
+		background: none;
+	}
 	.blog-section .sidebar-option {
 		padding-left: 0;
 	}
@@ -3006,6 +3018,9 @@ ol {
 		height: auto;
 	}
 }
+.team-section .ts-item img{
+	width:100% ;
+}
 
 /* Wide Mobile = 480px */
 
@@ -3022,6 +3037,9 @@ ol {
 		-webkit-transition: 0.3s;
 		-o-transition: 0.3s;
 		transition: 0.3s;
+	}
+	.header-section{
+		background: none;
 	}
 	.offcanvas-menu-overlay.active {
 		visibility: visible;
@@ -3236,6 +3254,9 @@ ol {
 		width: 100%;
 	}
 }
+.team-section.team-page .ts-item img{
+	width:100% ;
+}
 
 /* Small Device = 320px */
 
@@ -3243,6 +3264,9 @@ ol {
 	.primary-btn.appoinment-btn {
 		float: none;
 		margin-top: 0;
+	}
+	.header-section{
+		background: none;
 	}
 	.hs-slider .hs-item .hi-text h1 {
 		font-size: 38px;
