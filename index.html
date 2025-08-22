@@ -13,6 +13,9 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
     <!-- Css Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -22,6 +25,188 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+
+    <style>
+        /* body {
+        font-family: Arial, sans-serif;
+        background: #f8f9fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+      } */
+
+        /* جزر الزراير الاختيارات  */
+        .plan-selector {
+            width: 50%;
+            max-width: 1000px;
+            margin-bottom: 20px;
+        }
+
+        .plan-selector label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .plan-options {
+            display: flex;
+            border: 1px solid #e5e7eb;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #3B3A37;
+        }
+
+        .plan-options div {
+            flex: 1;
+            text-align: center;
+            padding: 12px 0;
+            cursor: pointer;
+            transition: background 0.3s;
+            border-right: 1px solid #FCCDAC;
+            font-size: 25px;
+            color: #BBD3EB;
+        }
+
+        .plan-options div:last-child {
+            border-right: none;
+        }
+
+        .plan-options div.active {
+            background: #c05b1d;
+            font-weight: bold;
+        }
+
+        /*  Card */
+        .pricing-card {
+            display: flex;
+            flex-wrap: wrap;
+            background: #3B3A37;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            max-width: 1000px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .pricing-features {
+            flex: 2;
+            padding: 30px;
+            text-align: right;
+        }
+
+        /*
+DC4B14
+551009
+060505
+1B2021
+3B3A37
+AE8C6F
+*/
+        .pricing-features h2 {
+            margin: 0 0 10px;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: right;
+            color: #BBD3EB;
+        }
+
+        .pricing-features p {
+            color: #aeaeae;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: right;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            direction: rtl;
+        }
+
+        .features-list li {
+            font-size: 19px;
+            font-weight: bold;
+            color: #d5ad89;
+            flex-direction: row-reverse;
+        }
+
+        .features-list i {
+            font-size: 16px;
+            color: #FCCDAC;
+            margin-left: 7px;
+        }
+
+        .pricing-cta {
+            flex: 1;
+            background: #1B2021;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .pricing-cta h3 {
+            font-size: 36px;
+            margin: 0;
+            color: #BBD3EB;
+        }
+
+        .pricing-cta span {
+            color: #6b7280;
+            margin-bottom: 20px;
+            display: block;
+
+        }
+
+
+
+        .pricing-cta a {
+            display: block;
+            margin-top: 15px;
+            color: #6b7280;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .pricing-cta a i {
+            margin-left: 6px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .pricing-card {
+                flex-direction: column;
+            }
+
+            .pricing-cta {
+                width: 100%;
+            }
+
+            .plan-options {
+                flex-direction: row;
+            }
+
+            .plan-options div {
+                border-right: none;
+                border-bottom: 1px solid #e5e7eb;
+            }
+
+            .plan-options div:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -32,21 +217,21 @@
 
     <!-- Offcanvas Menu Section Begin -->
     <div class="offcanvas-menu-overlay"></div>
-    <div class="offcanvas-menu-wrapper" style="position: fixed; overflow-x: hidden;">
+    <div class="offcanvas-menu-wrapper" style="position: fixed; overflow-x: hidden; background-color: #ddc7b4;">
         <div class="canvas-close">
             <i class="fa fa-close"></i>
         </div>
         <!-- <div class="canvas-search search-switch">
             <i class="fa fa-search"></i>
         </div> -->
-        <nav class="canvas-menu mobile-menu" >
+        <nav class="canvas-menu mobile-menu" style="text-align: center; ">
             <ul>
-                <li><a href="#hero" >الصفحه الرئيسيه</a></li>
-                <li><a href="#about" >ماذا عنا</a></li>
-                <li><a href="#service">خدماتنا</a></li>
-                <li><a href="#offer">العروض</a></li>
-                <li><a href="#photo">صور للجيم</a></li>
-                <li><a class="" href="#team">فريقنا</a></li>
+                <li><a style="font-size: 18px;" href="#hero">الصفحه الرئيسيه</a></li>
+                <li><a style="font-size: 18px;" href="#about">ماذا عنا</a></li>
+                <li><a style="font-size: 18px;" href="#service">خدماتنا</a></li>
+                <li><a style="font-size: 18px;" href="#offer">العروض</a></li>
+                <li><a style="font-size: 18px;" href="#photo">صور للجيم</a></li>
+                <li><a style="font-size: 18px;" class="" href="#team">فريقنا</a></li>
                 <!-- <li><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="./about-us.html">About us</a></li>
@@ -63,29 +248,35 @@
         </nav>
         <div id="mobile-menu-wrap"></div>
         <div class="canvas-social">
-            <a href="https://www.facebook.com/AhmedElShambaly?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
-            <a href="https://youtube.com/channel/UC_jh39xYw8yaxKesFTudttA?si=a6mq685NSf8zJfi_"><i class="fa fa-youtube-play"></i></a>
-            <a href="https://www.instagram.com/champollion.gym/?igsh=N2hlZWFzdHVzc3N5"><i class="fa fa-instagram"></i></a>
+            <a style="font-size: 18px;" href="https://www.facebook.com/AhmedElShambaly?mibextid=ZbWKwL"><i
+                    class="fa fa-facebook"></i></a>
+            <a style="font-size: 18px;"
+                href="https://youtube.com/channel/UC_jh39xYw8yaxKesFTudttA?si=a6mq685NSf8zJfi_"><i
+                    class="fa fa-youtube-play"></i></a>
+            <a style="font-size: 18px;" href="https://www.instagram.com/champollion.gym/?igsh=N2hlZWFzdHVzc3N5"><i
+                    class="fa fa-instagram"></i></a>
+            <a style="font-size: 18px;" href="https://www.tiktok.com/@champollion_gym?_t=ZS-8z4diX8LVx3&_r=1"><i
+                    class="fa fa-tiktok"></i></a>
         </div>
     </div>
     <!-- Offcanvas Menu Section End -->
 
     <!-- Header Section Begin -->
-    <header class="header-section" >
+    <header class="header-section">
         <div class="container-fluid" style="margin-bottom:10px;">
             <div class="row">
                 <div class="col-lg-3">
                     <div class="logo">
                         <a href="./index.html">
-                            <img src="img/logo.png" width="120" alt="" >
+                            <img src="img/logo.png" width="120" alt="">
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-6 ">
                     <nav class="nav-menu" dir="rtl">
                         <ul>
-                            <li><a href="#hero" >الصفحه الرئيسيه</a></li>
-                            <li><a href="#about" >ماذا عنا</a></li>
+                            <li><a href="#hero">الصفحه الرئيسيه</a></li>
+                            <li><a href="#about">ماذا عنا</a></li>
                             <li><a href="#service">خدماتنا</a></li>
                             <li><a href="#offer">العروض</a></li>
                             <li><a href="#photo">صور للجيم</a></li>
@@ -100,9 +291,15 @@
                             <i class="fa fa-search"></i>
                         </div> -->
                         <div class="to-social">
-                            <a href="https://www.facebook.com/AhmedElShambaly?mibextid=ZbWKwL"target="_blank"><i class="fa fa-facebook"></i></a>
-                            <a href="https://youtube.com/channel/UC_jh39xYw8yaxKesFTudttA?si=a6mq685NSf8zJfi_" target="_blank"><i class="fa fa-youtube-play"></i></a>
-                            <a href="https://www.instagram.com/champollion.gym/?igsh=N2hlZWFzdHVzc3N5" target="_blank"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/AhmedElShambaly?mibextid=ZbWKwL"target="_blank"><i
+                                    class="fa fa-facebook"></i></a>
+                            <a href="https://youtube.com/channel/UC_jh39xYw8yaxKesFTudttA?si=a6mq685NSf8zJfi_"
+                                target="_blank"><i class="fa fa-youtube-play"></i></a>
+                            <a href="https://www.instagram.com/champollion.gym/?igsh=N2hlZWFzdHVzc3N5"
+                                target="_blank"><i class="fa fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@champollion_gym?_t=ZS-8z4diX8LVx3&_r=1"target="_blank"><i
+                                    class="fa fa-tiktok"></i></a>
+
                         </div>
                     </div>
                 </div>
@@ -115,13 +312,13 @@
     <!-- Header End -->
 
     <!-- Hero Section Begin -->
-    <section class="hero-section" id="hero" >
+    <section class="hero-section" id="hero">
         <div class="hs-slider owl-carousel">
-            <div class="hs-item set-bg"  data-setbg="img/hero/hero-1.jpg">
+            <div class="hs-item set-bg" data-setbg="img/hero/hero-1.jpg">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 offset-lg-6">
-                            <div class="hi-text" >
+                            <div class="hi-text">
                                 <span style="font-size:50px; letter-spacing: normal;">شمبليون جيم</span>
                                 <h1>كن <strong>قويا</strong> تدرب بجد</h1>
                                 <!-- <a href="#" class="primary-btn">اضغط هنا</a> -->
@@ -214,7 +411,7 @@
                             <img src="img/classes/class-1.jpg" style="min-height: 230px;" alt="">
                         </div>
                         <div class="ci-text">
-                            <span style="font-size:30px !important;">خساره الاوزن</span>
+                            <span style="font-size:20px !important;">خساره الاوزن</span>
                             <!-- <h5>Weightlifting</h5> -->
                             <!-- <a href="#"><i class="fa fa-angle-right"></i></a> -->
                         </div>
@@ -290,73 +487,45 @@
     <!-- Banner Section End -->
 
     <!-- Pricing Section Begin -->
-    <section class="pricing-section spad" style="margin-top: -150px;" id="offer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
+    <section class="pricing-section  spad" style="margin-top: -150px;" id="offer">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-titl">
                     <div class="section-title">
-                        <span style="font-size: 50px !important;">العروض</span>
+                        <span style="font-size: 50px !important;">الاشتراكات</span>
                     </div>
                 </div>
+                <!-- <a href="#" class="primary-btn btn-normal appoinment-btn" style="text-align: center;">المدربين</a> -->
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-8">
-                    <div class="ps-item">
-                        <h3>الشهر</h3>
-                        <div class="pi-price">
-                            <h2>٢٠٠ ج</h2>
-                            <!-- <span>SINGLE CLASS</span> -->
-                        </div>
-                        <ul>
-                            <li>Free riding</li>
-                            <li>Unlimited equipments</li>
-                            <li>Personal trainer</li>
-                            <li>Weight losing classes</li>
-                            <li>Month to mouth</li>
-                            <li>No time restriction</li>
-                        </ul>
-                        <!-- <a href="#" class="primary-btn pricing-btn">Enroll now</a> -->
-                        <!-- <a href="#" class="thumb-icon"><i class="fa fa-picture-o"></i></a> -->
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-8">
-                    <div class="ps-item">
-                        <h3> ٦ شهور</h3>
-                        <div class="pi-price">
-                            <h2>١٠٠٠ ج</h2>
-                            <!-- <span>SINGLE CLASS</span> -->
-                        </div>
-                        <ul>
-                            <li>Free riding</li>
-                            <li>Unlimited equipments</li>
-                            <li>Personal trainer</li>
-                            <li>Weight losing classes</li>
-                            <li>Month to mouth</li>
-                            <li>No time restriction</li>
-                        </ul>
-                        <!-- <a href="#" class="primary-btn pricing-btn">Enroll now</a> -->
-                        <!-- <a href="#" class="thumb-icon"><i class="fa fa-picture-o"></i></a> -->
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-8">
-                    <div class="ps-item">
-                        <h3>سنه</h3>
-                        <div class="pi-price">
-                            <h2>١٨٠٠ ج</h2>
-                            <!-- <span>SINGLE CLASS</span> -->
-                        </div>
-                        <ul>
-                            <li>Free riding</li>
-                            <li>Unlimited equipments</li>
-                            <li>Personal trainer</li>
-                            <li>Weight losing classes</li>
-                            <li>Month to mouth</li>
-                            <li>No time restriction</li>
-                        </ul>
-                        <!-- <a href="#" class="primary-btn pricing-btn">Enroll now</a> -->
-                        <!-- <a href="#" class="thumb-icon"><i class="fa fa-picture-o"></i></a> -->
-                    </div>
-                </div>
+        </div>
+        <!-- الاخيارات  -->
+        <div class="plan-selector mx-auto">
+            <!-- <label>Choose a pricing plan:</label> -->
+            <div class="plan-options">
+                <div class="plan " data-plan="standard">السيدات</div>
+                <div class="plan active " data-plan="starter">رجالي</div>
+                <!-- <div class="plan" data-plan="premium">Premium</div>
+        <div class="plan" data-plan="enterprise">Enterprise</div> -->
+            </div>
+        </div>
+
+        <!--  Card (Dynamic) -->
+        <div class="pricing-card mx-auto">
+            <!-- Left -->
+            <div class="pricing-features">
+                <h2 id="plan-title">بنقدملك اي</h2>
+                <p id="plan-desc">Perfect for individuals just getting started.</p>
+                <ul class="features-list" id="plan-features">
+                    <!-- Features هتتغير في الجزء دا  -->
+                </ul>
+            </div>
+
+            <!-- Right-->
+            <div class="pricing-cta">
+                <h3 style="font-size: 50px;" id="plan-price"></h3>
+                <span style="font-size: 25px;">شهريا</span>
+                <!-- <button id="buy-btn">Buy now</button> -->
+                <!-- <a href="#">View team pricing <i class="fas fa-arrow-right"></i></a> -->
             </div>
         </div>
     </section>
@@ -364,31 +533,35 @@
 
     <!-- Gallery Section Begin -->
     <div class="gallery-section" id="photo">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-titl">
+                    <div class="section-title">
+                        <span style="font-size: 50px !important;">صور الجيم</span>
+                    </div>
+                </div>
+                <!-- <a href="#" class="primary-btn btn-normal appoinment-btn" style="text-align: center;">المدربين</a> -->
+            </div>
+        </div>
         <div class="gallery">
             <div class="grid-sizer"></div>
             <div class="gs-item grid-wide set-bg" data-setbg="img/gallery/l_D_1.jpg">
-                <a href="img/gallery/l_D_1.jpg" class="thumb-icon image-popup"><i
-                        class="fa fa-picture-o"></i></a>
+                <a href="img/gallery/l_D_1.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
             </div>
             <div class="gs-item set-bg" data-setbg="img/gallery/D_5.jpg">
-                <a href="img/gallery/D_5.jpg" class="thumb-icon image-popup"><i
-                        class="fa fa-picture-o"></i></a>
+                <a href="img/gallery/D_5.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
             </div>
             <div class="gs-item set-bg" data-setbg="img/gallery/D_3.jpg">
-                <a href="img/gallery/D_3.jpg" class="thumb-icon image-popup"><i
-                        class="fa fa-picture-o"></i></a>
+                <a href="img/gallery/D_3.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
             </div>
             <div class="gs-item set-bg" data-setbg="img/gallery/D_2.jpg">
-                <a href="img/gallery/D_2.jpg" class="thumb-icon image-popup"><i
-                        class="fa fa-picture-o"></i></a>
+                <a href="img/gallery/D_2.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
             </div>
             <div class="gs-item set-bg" data-setbg="img/gallery/D_4.jpg">
-                <a href="img/gallery/D_4.jpg" class="thumb-icon image-popup"><i
-                        class="fa fa-picture-o"></i></a>
+                <a href="img/gallery/D_4.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
             </div>
             <div class="gs-item grid-wide set-bg" data-setbg="img/gallery/l_U_1.jpg">
-                <a href="img/gallery/l_U_1.jpg" class="thumb-icon image-popup"><i
-                        class="fa fa-picture-o"></i></a>
+                <a href="img/gallery/l_U_1.jpg" class="thumb-icon image-popup"><i class="fa fa-picture-o"></i></a>
             </div>
         </div>
     </div>
@@ -396,7 +569,7 @@
 
     <!-- Team Section Begin -->
     <section class="team-section " id="team">
-        <div class="container" >
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-titl">
@@ -408,7 +581,7 @@
                 </div>
             </div>
         </div>
-        <div class="row d-flex justify-content-evenly" >
+        <div class="row d-flex justify-content-evenly">
             <!-- <div class="ts-slider owl-carousel"> -->
             <!-- <div class="col-lg-4">
                         <div class="ts-item set-bg" data-setbg="img/team/team-1.jpg">
@@ -418,18 +591,24 @@
                             </div>
                         </div>
                     </div> -->
-                
+
             <div class="col-lg-4 mb-4 mx-auto">
                 <div class="ts-item set-bg">
                     <img src="img/team/احمد-الشمبلي.jpg" alt="صوره كابتن الجيم">
                     <div class="ts_text">
                         <h4>احمد الشمبلي</h4>
                         <span style="font-size: 20px;">
-                        <div class="canvas-social d-flex justify-content-center text-center"style="gap: 15px;">
-                            <a href="tel:01099714065"><i class="fa fa-phone"></i></a>
-                            <a href="https://www.instagram.com/ahmed_elshambaly/?igsh=MTk5aDBlYmN4b3ZhcA%3D%3D"><i class="fa fa-instagram"></i></a>
-                            <a href="https://www.facebook.com/ahmed.el.shambaly.2025?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
-                        </div>
+                            <div class="canvas-social d-flex justify-content-center text-center"style="gap: 15px;">
+                                <a href="tel:01099714065"><i class="fa fa-phone" style="color: #BBD3EB;"></i></a>
+                                <a href="https://www.instagram.com/ahmed_elshambaly/?igsh=MTk5aDBlYmN4b3ZhcA%3D%3D"><i
+                                        class="fa fa-instagram"style="color: #BBD3EB;"></i></a>
+                                <a href="https://www.facebook.com/ahmed.el.shambaly.2025?mibextid=ZbWKwL"><i
+                                        class="fa fa-facebook"style="color: #BBD3EB;"></i></a>
+                                <a
+                                    href="https://www.tiktok.com/@champollion_gym?_t=ZS-8z4diX8LVx3&_r=1"target="_blank"><i
+                                        class="fa fa-tiktok"style="color: #BBD3EB;"></i></a>
+
+                            </div>
                         </span>
                     </div>
                 </div>
@@ -484,23 +663,33 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="gt-text">
-                        <a href="https://maps.app.goo.gl/Xenb6ANf4PUCC19B7" target="_blank"><i class="fa fa-map-marker"></i></a>
-                        <a href="https://maps.app.goo.gl/Xenb6ANf4PUCC19B7" target="_blank"><p style="font-size: larger;">كفر الشيخ بيلا اعلى موبليات ابو غالي<br /> طريق : الجرايده</p></a>
+                        <a href="https://maps.app.goo.gl/Xenb6ANf4PUCC19B7" target="_blank"><i
+                                class="fa fa-map-marker"></i></a>
+                        <a href="https://maps.app.goo.gl/Xenb6ANf4PUCC19B7" target="_blank">
+                            <p style="font-size: larger;">كفر الشيخ بيلا اعلى موبليات ابو غالي<br /> طريق : الجرايده
+                            </p>
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="gt-text">
                         <a href="tel:01099714065"><i class="fa fa-mobile"></i></a>
                         <ul>
-                            <a href="tel:01099714065"><li>01099714065  </li></a>
-                            <a href="tel:01555399322"><li>| 01555399322</li></a>
+                            <a href="tel:01099714065">
+                                <li>01099714065 </li>
+                            </a>
+                            <a href="tel:01555399322">
+                                <li>| 01555399322</li>
+                            </a>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="gt-text email">
                         <a href="mailto:ahmedelshambaly07@gmail.com"><i class="fa fa-envelope"></i></a>
-                        <a href="mailto:ahmedelshambaly07@gmail.com"><p>ahmedelshambaly07@gmail.com</p></a>
+                        <a href="mailto:ahmedelshambaly07@gmail.com">
+                            <p>ahmedelshambaly07@gmail.com</p>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -509,7 +698,7 @@
     <!-- Get In Touch Section End -->
 
     <!-- Footer Section Begin -->
-    <section class="footer-section  d-flex justify-content-evenly" >
+    <section class="footer-section  d-flex justify-content-evenly">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 mx-auto text-center">
@@ -518,12 +707,18 @@
                             <a href="#"><img src="img/logo.png" alt=""></a>
                         </div>
                         <p style="font-size: larger;">رحلتك نحو القوة مش بتبدأ في الجيم، بتبدأ في عقلك.
-كل يوم بتتحدى فيه نفسك هو خطوة أقرب لهدفك الحقيقي.
-مفيش مستحيل قدام الإصرار، ودايمًا فاكر إنك أقوى مما تتخيل!</p>
-                        <div class="fa-social" >
-                            <a href="https://www.facebook.com/AhmedElShambaly?mibextid=ZbWKwL" style="font-size: larger;"><i class="fa fa-facebook"></i></a>
-                            <a href="https://youtube.com/channel/UC_jh39xYw8yaxKesFTudttA?si=a6mq685NSf8zJfi_"><i class="fa fa-youtube-play"></i></a>
-                            <a href="https://www.instagram.com/champollion.gym/?igsh=N2hlZWFzdHVzc3N5"><i class="fa fa-instagram"></i></a>
+                            كل يوم بتتحدى فيه نفسك هو خطوة أقرب لهدفك الحقيقي.
+                            مفيش مستحيل قدام الإصرار، ودايمًا فاكر إنك أقوى مما تتخيل!</p>
+                        <div class="fa-social">
+                            <a   href="https://www.facebook.com/AhmedElShambaly?mibextid=ZbWKwL"
+                                ><i class="fa fa-facebook" style="font-size: 20px;"></i></a>
+                            <a   href="https://youtube.com/channel/UC_jh39xYw8yaxKesFTudttA?si=a6mq685NSf8zJfi_"><i
+                                    style="font-size: 20px;" class="fa fa-youtube-play"></i></a>
+                            <a  href="https://www.instagram.com/champollion.gym/?igsh=N2hlZWFzdHVzc3N5"><i
+                                    style="font-size: 20px;" class="fa fa-instagram"></i></aaa>
+                            <a   href="https://www.tiktok.com/@champollion_gym?_t=ZS-8z4diX8LVx3&_r=1"target="_blank"><i
+                                style="font-size: 20px;"    class="fa fa-tiktok"></i></a>
+
                             <!-- <a href="#"><i class="fa  fa-envelope-o"></i></a> -->
                         </div>
                     </div>
@@ -573,13 +768,15 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="copyright-text">
-                        <a href="https://yusef-ramy.github.io/Simple-Card/" target="_blank"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script>
-                                document.write(new Date().getFullYear());
-                            </script> All rights reserved | This template is made with <i
-                                class="fa fa-heart" aria-hidden="true"></i> by Eng : Yusef Ramy Saber</a>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <a href="https://yusef-ramy.github.io/Simple-Card/" target="_blank">
+                            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script> All rights reserved | This template is made with <i
+                                    class="fa fa-heart" aria-hidden="true"></i> by Eng : Yusef Ramy Saber
+                        </a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p></a>
                     </div>
                 </div>
@@ -609,6 +806,69 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 
+    <script>
+        // البيانات اللي هتتغير
+        const plansData = {
+            starter: {
+                title: "مميازات الاشتراك",
+                desc: "المواعيد : كل الايام ماعدا  فتره السيدات",
+                price: "250",
+                features: [
+                    "نظام بدريبي وغذائي خاص",
+                    "فقدان الوزن",
+                    "بناء العضلات",
+                    "المتابعه المستمره",
+
+                ],
+            },
+            standard: {
+                title: "مميازات الاشتراك",
+                desc: "المواعيد: الاحد ، الثلاثاء , الخميس من 9 ل 12 صباحا ومن 6 ل 8 مساء",
+                price: "200",
+                features: [
+                    "نظام تدريبي وغذائي خاص",
+                    "فقدان الوزن",
+                    "شد الجسم",
+                    "التعافي من الاصابات",
+                    "المتابعه المستمره",
+                ],
+            },
+
+        };
+
+        // Selectors
+        const plans = document.querySelectorAll(".plan");
+        const title = document.getElementById("plan-title");
+        const desc = document.getElementById("plan-desc");
+        const price = document.getElementById("plan-price");
+        const featuresList = document.getElementById("plan-features");
+
+        // هنا  الداله اللي هتشغلي التبديل
+        function loadPlan(planKey) {
+            const plan = plansData[planKey];
+            title.textContent = plan.title;
+            desc.textContent = plan.desc;
+            price.textContent = plan.price;
+            featuresList.innerHTML = "";
+            plan.features.forEach((f) => {
+                const li = document.createElement("li");
+                li.innerHTML = `<i class="fas fa-check-circle"></i> ${f}`;
+                featuresList.appendChild(li);
+            });
+        }
+
+        loadPlan("starter");
+
+        // التبديل بين الكاردات
+        plans.forEach((plan) => {
+            plan.addEventListener("click", () => {
+                plans.forEach((p) => p.classList.remove("active"));
+                plan.classList.add("active");
+                const planKey = plan.getAttribute("data-plan");
+                loadPlan(planKey);
+            });
+        });
+    </script>
 
 
 </body>
