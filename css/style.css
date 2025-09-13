@@ -120,6 +120,7 @@ ol {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
+	/* background-size: contain; */
 }
 
 .spad {
@@ -480,6 +481,11 @@ ol {
 /*---------------------
   Hero Section
 -----------------------*/
+.hs-slider.owl-carousel .owl-item.active .hs-item .hi-text{
+	text-align: right;
+	margin-top:150px;
+}
+
 
 .hs-slider.owl-carousel .owl-item.active .hs-item .hi-text span {
 	position: relative;
@@ -635,6 +641,7 @@ ol {
 
 .class-item .ci-pic img {
 	min-width: 100%;
+	min-height: 230px;
 }
 
 .class-item .ci-text {
@@ -711,7 +718,6 @@ ol {
 	display: grid;
 	-webkit-box-align: center; 
 	-ms-flex-align: center;
-	/* align-items: center; */
 	-webkit-box-pack: center;
 	-ms-flex-pack: center;
 	justify-content: center;
@@ -719,6 +725,8 @@ ol {
 
 .bs-text.service-banner .bt-tips {
 	margin-bottom: 100px !important;
+	font-size: 30px;
+	font-weight: 500;
 }
 
 .bs-text h2 {
