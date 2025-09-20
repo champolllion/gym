@@ -1,12 +1,3 @@
-/*  ---------------------------------------------------
-  Template Name: Gym
-  Description:  Gym Fitness HTML Template
-  Author: Colorlib
-  Author URI: https://colorlib.com
-  Version: 1.0
-  Created: Colorlib
----------------------------------------------------------  */
-
 'use strict';
 
 (function ($) {
@@ -86,25 +77,26 @@
         Team Slider
     --------------------*/
     $(".ts-slider").owlCarousel({
-        // loop: true,
-        // margin: 0,
-        // items: 3,
-        // dots: true,
-        // dotsEach: 2,
-        // smartSpeed: 1200,
-        // autoHeight: false,
-        // autoplay: true,
-        // responsive: {
-        //     320: {
-        //         items: 1,
-        //     },
-        //     768: {
-        //         items: 2,
-        //     },
-        //     992: {
-        //         items: 3,
-        //     }
-        // }
+        loop: true,
+        rewind: false,
+        margin: 0,
+        items: 3,
+        dots: false,
+        dotsEach: 1,
+        smartSpeed: 1200,
+        autoHeight: false,
+        autoplay: true,
+        responsive: {
+            320: {
+                items: 1,
+            },
+            768: {
+                items: 2,
+            },
+            992: {
+                items: 3,
+            }
+        }
     });
 
     /*------------------
