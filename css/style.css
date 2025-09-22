@@ -1027,25 +1027,26 @@ ol {
 	overflow: hidden;
 }
 
-.ts-item:hover .ts_text {
-	bottom: -35px;
-}
+/* .ts-item:hover .ts_text {
+	bottom: -500px;
+} */
 
 .ts-item .ts_text {
 	padding: 40px 0 60px;
 	text-align: center;
-	background: #0a0a0a;
-	border-top: 4px solid #464646;
+	background: #0a0a0a63;
+	border-top: 4px solid #4646465b;
 	-webkit-transform: skewY(-5deg);
 	-ms-transform: skewY(-5deg);
 	transform: skewY(-5deg);
 	position: absolute;
-	left: 0;
-	bottom: -250px;
+	left: 0px;
+	bottom: -20px;
 	width: 100%;
 	-webkit-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
+	overflow: hidden;
 }
 
 .ts-item .ts_text h4 {
